@@ -1,0 +1,6 @@
+bin/
+*.o
+*.class
+*.dex
+*.cache
+*.ap_

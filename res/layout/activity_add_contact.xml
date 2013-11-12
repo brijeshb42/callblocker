@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddContactActivity" >
+
+    <EditText
+        android:id="@+id/contact_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="@string/name"
+        android:textStyle="bold" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/contact_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/contact_name"
+        android:ems="10"
+        android:hint="@string/number"
+        android:inputType="phone" />
+    <TextView
+        android:id="@+id/type_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/contact_number"
+        android:paddingLeft="4dp"
+        android:paddingTop="4dp"
+        android:text="@string/type_text" />
+    <RadioGroup
+        android:id="@+id/type_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/type_text" >
+
+        <RadioButton
+            android:id="@+id/type_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_weight="0.5"
+            android:text="@string/type_num" />
+
+        <RadioButton
+            android:id="@+id/type_regex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/type_regex" />
+    </RadioGroup>
+    
+    <LinearLayout
+        android:id="@+id/picker_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/type_group"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/from_contacts"
+            android:textColor="@color/text_shadow"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="@string/pick_from_contacts"
+            android:layout_gravity="left"
+            android:textIsSelectable="false" />
+        <Button
+            android:id="@+id/from_log"
+            android:textColor="@color/text_shadow"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="@string/pick_from_log"
+            android:layout_gravity="right"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/add_contact_btn"
+            android:textColor="@color/text"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="@string/add_contact"
+            android:layout_gravity="left"
+            android:background="@drawable/button_background_states"
+            android:textIsSelectable="false" />
+
+        <Button
+            android:id="@+id/cancel_contact"
+            android:textColor="@color/text"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="@string/cancel"
+            android:layout_gravity="right"
+            android:background="@drawable/button_danger_background_states"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:descendantFocusability="blocksDescendants"
+	android:background="@drawable/contact_list_background_states" >
+    <TextView
+    	android:id="@+id/contact_name"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:textStyle="bold"
+    	android:textColor="@color/text_shadow"
+    	android:padding="5dip"
+    	android:textSize="25sp"
+    	android:text="@string/app_name" >
+	</TextView>
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+	    <TextView
+    		android:id="@+id/contact_number"
+    		android:layout_width="0dip"
+    		android:layout_weight="1.0"
+    		android:layout_height="wrap_content"
+	    	android:textColor="@color/text_shadow"
+    		android:paddingLeft="5dip"
+    		android:textSize="12sp"
+    		android:text="@string/app_name" >
+		</TextView>
+	</LinearLayout>
+
+</LinearLayout>
